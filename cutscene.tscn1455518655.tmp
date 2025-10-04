@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=3 uid="uid://7l3eegpq6bow"]
+
+[ext_resource type="Texture2D" uid="uid://c13r81n2nw2k1" path="res://sky.png" id="1_ix241"]
+[ext_resource type="Texture2D" uid="uid://cmk3t36sa1bej" path="res://rocket.png" id="2_8vcau"]
+[ext_resource type="Script" uid="uid://cnyn5wv4q3mgk" path="res://camera_2d.gd" id="3_8vcau"]
+
+[sub_resource type="Animation" id="Animation_u4yv4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Rocket:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(520, 710)]
+}
+
+[sub_resource type="Animation" id="Animation_bl24s"]
+resource_name = "Rocket"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Rocket:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.033333335, 10.4),
+"transitions": PackedFloat32Array(1, 0.9012505),
+"update": 0,
+"values": [Vector2(520, 710), Vector2(570, 50)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p30sb"]
+_data = {
+&"RESET": SubResource("Animation_u4yv4"),
+&"Rocket": SubResource("Animation_bl24s")
+}
+
+[sub_resource type="GDScript" id="GDScript_8vcau"]
+script/source = "extends RichTextLabel
+pass
+"
+
+[node name="Cutscene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(574, 328)
+script = ExtResource("3_8vcau")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_p30sb")
+}
+autoplay = "Rocket"
+
+[node name="Sky" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(575, 327.24997)
+scale = Vector2(1.8402556, 1.6958222)
+texture = ExtResource("1_ix241")
+
+[node name="Rocket" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(520, 710)
+scale = Vector2(3.7049997, 3.8400004)
+texture = ExtResource("2_8vcau")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AnimationPlayer"]
+offset_left = 59.0
+offset_top = 516.0
+offset_right = 626.0
+offset_bottom = 611.0
+mouse_force_pass_scroll_events = false
+theme_override_colors/font_selected_color = Color(0, 0, 16.308277, 1)
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[color=\"blue\"]You've made it -- you're on a rocket to the International Space Station!"
+justification_flags = 35
+script = SubResource("GDScript_8vcau")

@@ -1,0 +1,82 @@
+[gd_scene load_steps=11 format=3 uid="uid://ciykhyp14p4d4"]
+
+[ext_resource type="PackedScene" uid="uid://bylmogb0x0ln6" path="res://Scenes/astronaut.tscn" id="1_b62ra"]
+[ext_resource type="Texture2D" uid="uid://3ss5x8koscff" path="res://Assets/moon pic.png" id="2_thehn"]
+[ext_resource type="PackedScene" uid="uid://y0srlubxfdol" path="res://Scenes/moon_rock.tscn" id="3_dcfg7"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dcfg7"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lm8jm"]
+texture = SubResource("CompressedTexture2D_dcfg7")
+
+[sub_resource type="TileSet" id="TileSet_x8vxa"]
+sources/0 = SubResource("TileSetAtlasSource_lm8jm")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_thehn"]
+size = Vector2(386, 46.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcfg7"]
+size = Vector2(18, 218)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lm8jm"]
+size = Vector2(20, 217)
+
+[sub_resource type="GDScript" id="GDScript_dcfg7"]
+resource_name = "pop-up-text"
+
+[node name="Moon" type="Node2D"]
+
+[node name="Astronaut" parent="." instance=ExtResource("1_b62ra")]
+z_index = 1
+position = Vector2(-86, 80)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(33, 20)
+zoom = Vector2(3, 3)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_x8vxa")
+format = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -159.0
+offset_top = -89.0
+offset_right = 225.0
+offset_bottom = 128.0
+color = Color(0.08468992, 0.08468992, 0.08468992, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="MoonPic" type="Sprite2D" parent="."]
+position = Vector2(32.5, 27.999994)
+scale = Vector2(1.2664474, 0.93518513)
+texture = ExtResource("2_thehn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(34, 105.25)
+shape = SubResource("RectangleShape2D_thehn")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-150, 19)
+shape = SubResource("RectangleShape2D_dcfg7")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(216, 19.5)
+shape = SubResource("RectangleShape2D_lm8jm")
+
+[node name="Area2D" parent="." instance=ExtResource("3_dcfg7")]
+position = Vector2(117, 67)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pop-up" type="AcceptDialog" parent="CanvasLayer"]
+title = "Benefits!"
+size = Vector2i(700, 270)
+dialog_close_on_escape = false
+dialog_autowrap = true
+script = SubResource("GDScript_dcfg7")

@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://y0srlubxfdol"]
+
+[ext_resource type="Texture2D" uid="uid://bcc6hdderck4r" path="res://Assets/image-removebg-preview.png" id="1_g8ga5"]
+
+[sub_resource type="GDScript" id="GDScript_g8ga5"]
+script/source = "extends Area2D
+
+# Replace with your ACTUAL path from the tree print, e.g., \"/root/Level/CanvasLayer/ItemPopup\"
+@onready var popup: AcceptDialog = get_node(\"/root/Moon/CanvasLayer/Pop-up\")  # <-- UPDATE THIS!
+
+func _ready():
+	# Debug: Check if popup is found
+	if popup:
+		print(\"SUCCESS: Popup found at path: /root/Level/CanvasLayer/ItemPopup\")  # Update print too
+	else:
+		print(\"ERROR: Popup NOT found! Check the path below.\")
+		# Print the full scene tree to help debug (run once, then check Output)
+
+func _on_body_entered(body: Node2D) -> void:
+	print(\"Body entered: \", body.name)  # Debug: Confirm signal fires
+	
+	if body.name == \"Astronaut\":
+		print(\"Collecting moon rock...\")  # Debug
+		
+		# Collect the item FIRST (this should happen regardless of popup)
+		queue_free()
+		
+		# Safely show popup only if it exists
+		if popup:
+			popup.dialog_text = \"The sight and weightlessness that astronauts experience actually helps advance regenerative medicine. By studying weightlessness, scientists were able to add to their medical research regarding muscle and bone loss which eventually led to better treatments for muscle degeneration and osteoporosis. \\n \\n Furthermore, astronauts often experience something called the ‘overview effect’ which is when astronauts are looking at Earth from space. This sight leads them to feel a deeper understanding of life on Earth and humanity, fostering a sense of belonging. On Earth, therapists use this effect to help their patients also gain the same gratitude and feeling of belonging.\"
+			popup.popup_centered()
+			print(\"SUCCESS: Popup shown!\")
+		else:
+			print(\"ERROR: Can't show popup - it's null. Fix the path first.\")
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3f5xw"]
+radius = 17.029387
+
+[node name="Area2D" type="Area2D"]
+script = SubResource("GDScript_g8ga5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(0.17050003, 0.17050003)
+texture = ExtResource("1_g8ga5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_3f5xw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

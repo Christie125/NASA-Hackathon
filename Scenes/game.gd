@@ -6,6 +6,9 @@ var images = []
 var correct_button
 
 func _ready():
+	start()
+
+func start():
 	images = [$Himalayas, $Pyramids, $Canyonwebp]
 	correct_button = $Canyonwebp
 
@@ -16,8 +19,10 @@ func _ready():
 	$CanvasLayer/text2.visible = false
 	$CanvasLayer/text3.visible = false
 	$CanvasLayer/text4.visible = false
+	$CanvasLayer/text5.visible = false
 	$"CanvasLayer/you-won".visible = false
 	$"CanvasLayer/YOU-LOST".visible=false
+	$CanvasLayer/taken.visible=false
 
 	print("about to show intrcutions")
 	show_instructions()
@@ -36,6 +41,9 @@ func show_instructions():
 	$CanvasLayer/text4.visible = true
 	await get_tree().create_timer(4.0).timeout
 	$CanvasLayer/text4.visible = false
+	$CanvasLayer/text5.visible = true
+	await get_tree().create_timer(4.0).timeout
+	$CanvasLayer/text5.visible = false
 	
 	print("about to start game")
 	#starts actual game
@@ -64,13 +72,19 @@ func _on_image_pressed(button: TextureButton):
 	if button == correct_button:
 		user_score += 1
 		print("canyon pressed!")
+		$CanvasLayer/taken.visible=true
+		await get_tree().create_timer(0.4).timeout
+		$CanvasLayer/taken.visible=false
 
 
 func check_result():
-	if user_score >= 3:
+	if user_score >= 5:
 		print("You won!")
 		$"CanvasLayer/you-won".visible=true
 	else:
 		print("You lost!")
 		print(user_score)
 		$"CanvasLayer/YOU-LOST".visible=true
+		await get_tree().create_timer(3).timeout
+		start()
+		

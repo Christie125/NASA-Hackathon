@@ -180,12 +180,13 @@ position = Vector2(130, 65)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_5xrq2")
+rendering_quadrant_size = 24
 format = 2
-layer_0/tile_data = PackedInt32Array(-196616, 983040, 4, -131080, 983040, 5, -196615, 786432, 4, -196614, 851968, 4, -196612, 851968, 4, -196610, 851968, 4, -262144, 851968, 4, -262142, 851968, 4, -262140, 851968, 4, -262138, 851968, 4, -262136, 851968, 4, -262135, 983040, 4, -196599, 983040, 5, -196613, 851968, 4, -196611, 851968, 4, -196609, 851968, 4, -262143, 851968, 4, -262141, 851968, 4, -262139, 851968, 4, -262137, 851968, 4, -65544, 983040, 5, -8, 983040, 5, 65528, 983040, 5, 327672, 983040, 5, 262136, 983040, 5, 196600, 983040, 5, 131064, 983040, 5, -131063, 983040, 5, -65527, 983040, 5, 9, 983040, 5, 65545, 983040, 5, 131081, 983040, 5, 196617, 983040, 5, 262153, 983040, 5, 327689, 917504, 4, 393208, 786432, 4, 393209, 851968, 4, 393210, 851968, 4, 393211, 851968, 4, 393212, 851968, 4, 393213, 851968, 4, 393214, 851968, 4, 393215, 851968, 4, 327680, 851968, 4, 327681, 851968, 4, 327682, 851968, 4, 327683, 851968, 4, 327684, 851968, 4, 327685, 851968, 4, 327686, 851968, 4, 327687, 851968, 4, 327688, 851968, 4, 65529, 0, 1, 131065, 0, 1, 196601, 0, 1, -7, 0, 1, 262137, 0, 1, -65543, 0, 1, -131079, 0, 0, 327673, 0, 2, 262151, 65536, 2, 262150, 65536, 2, 262149, 65536, 2, 262148, 65536, 2, 262147, 65536, 2, 262146, 65536, 2, 262145, 65536, 2, 262144, 65536, 2, 327679, 65536, 2, 327678, 65536, 2, 327677, 65536, 2, 327676, 65536, 2, 327675, 65536, 2, 327674, 65536, 2, -131078, 65536, 0, -131077, 65536, 0, -131076, 65536, 0, -131075, 65536, 0, -131074, 65536, 0, -131073, 65536, 0, -196608, 65536, 0, -196607, 65536, 0, -196606, 65536, 0, -196605, 65536, 0, -196604, 65536, 0, -196601, 65536, 0, -131064, 131072, 1, -65528, 131072, 1, 8, 131072, 1, 65544, 131072, 1, 131080, 131072, 1, 196616, 131072, 1, -196600, 131072, 0, 262152, 131072, 2, 196605, 65536, 1, 262141, 65536, 1, 196606, 65536, 1, 262142, 65536, 1, 262143, 65536, 1, 196608, 65536, 1, 196609, 65536, 1, 196610, 65536, 1, 196611, 65536, 1, 196612, 65536, 1, 131076, 65536, 1, 65540, 65536, 1, 65539, 65536, 1, 131075, 65536, 1, 3, 65536, 1, -65529, 65536, 1, 7, 65536, 1, 6, 65536, 1, 5, 65536, 1, 4, 65536, 1, -131065, 65536, 1, -65534, 65536, 1, -65535, 65536, 1, -65536, 65536, 1, -1, 65536, 1, -2, 65536, 1, -3, 65536, 1, -65539, 65536, 1, -65538, 65536, 1, -65537, 65536, 1, -131072, 65536, 1, -131071, 65536, 1, -131070, 65536, 1, 131069, 65536, 1, 131070, 65536, 1, 65534, 65536, 1, 65533, 65536, 1, 2, 1376256, 0, 1, 1376256, 0, 0, 1376256, 0, 65535, 1376256, 0, 131071, 1376256, 0, 196607, 1376256, 0, 131072, 1376256, 0, 131073, 1376256, 0, 131074, 1376256, 0, 65538, 1376256, 0, 65537, 1376256, 0, 65536, 1376256, 0, -65541, 1376256, 1, -4, 1376256, 1, 65532, 1376256, 1, 65530, 1376256, 1, -6, 1376256, 1, -5, 1376256, 1, 65531, 1376256, 1, 131067, 1376256, 1, 131066, 65536, 1, 196602, 65536, 1, 262138, 65536, 1, 262139, 65536, 1, 262140, 65536, 1, 196604, 65536, 1, 131068, 65536, 1, 196603, 65536, 1, -65542, 65536, 1, -65540, 65536, 1, -196603, 65536, 0, -196602, 65536, 0, -131068, 1376256, 0, -131067, 1376256, 0, -65531, 1376256, 0, -65532, 1376256, 0, 65542, 1376256, 0, 131078, 1376256, 0, 196614, 1376256, 0, 131077, 1376256, 0, 131079, 1376256, 0, -65533, 65536, 1, -131069, 65536, 1, -131066, 65536, 1, -65530, 65536, 1, 65543, 65536, 1, 65541, 65536, 1, 196613, 65536, 1, 196615, 65536, 1)
+layer_0/tile_data = PackedInt32Array(196605, 1376256, 2, 262141, 1376256, 0, 196606, 1376256, 0, 262142, 1376256, 0, 262143, 1376256, 0, 196608, 1376256, 0, 196609, 1376256, 0, 196610, 1376256, 0, 196611, 1376256, 0, 196612, 1376256, 0, 131076, 1376256, 2, 65540, 1376256, 0, 65539, 1376256, 0, 131075, 1376256, 0, 3, 1376256, 0, -65529, 1376256, 0, 7, 1376256, 0, 6, 1376256, 2, 5, 1376256, 2, 4, 1376256, 2, -131065, 1376256, 0, -65534, 1376256, 0, -65535, 1376256, 0, -65536, 1376256, 0, -1, 1376256, 0, -2, 1376256, 0, -3, 1376256, 0, -65539, 1376256, 0, -65538, 1376256, 2, -65537, 1376256, 2, -131072, 1376256, 0, -131071, 1376256, 2, -131070, 1376256, 2, 131069, 1376256, 0, 131070, 1376256, 0, 65534, 1376256, 0, 65533, 1376256, 2, 2, 1376256, 2, 1, 1376256, 2, 0, 1376256, 2, 65535, 1376256, 2, 131071, 1376256, 2, 196607, 1376256, 2, 131072, 1376256, 2, 131073, 1376256, 2, 131074, 1376256, 2, 65538, 1376256, 2, 65537, 1376256, 2, 65536, 1376256, 2, -65541, 458752, 1, -4, 1376256, 0, 65532, 1376256, 2, 65530, 1376256, 2, -6, 1376256, 0, -5, 1376256, 0, 65531, 1376256, 2, 131067, 1376256, 0, 131066, 1376256, 0, 196602, 1376256, 2, 262138, 1376256, 0, 262139, 1376256, 0, 262140, 1376256, 0, 196604, 1376256, 2, 131068, 1376256, 0, 196603, 1376256, 2, -65542, 458752, 1, -65540, 458752, 1, -131068, 1376256, 2, -131067, 1376256, 2, -65531, 1376256, 0, -65532, 1376256, 0, 131078, 1376256, 2, 196614, 1376256, 0, 131077, 1376256, 2, 131079, 1376256, 0, -65533, 1376256, 0, -131069, 1376256, 0, -131066, 1376256, 2, -65530, 1376256, 0, 65543, 1376256, 0, 65541, 1376256, 0, 196613, 1376256, 0, 196615, 1376256, 0, -131079, 458752, 1, -65543, 458752, 1, -7, 1376256, 0, 65529, 1376256, 0, 131065, 1376256, 0, 196601, 1376256, 0, 262137, 1376256, 0, -131078, 458752, 1, -131077, 458752, 1, -131076, 458752, 1, -131075, 1376256, 0, -131074, 1376256, 2, -131073, 1376256, 2, -196608, 1376256, 0, -196607, 1376256, 2, -196606, 1376256, 2, -196605, 1376256, 0, -196604, 1376256, 2, -196603, 1376256, 2, -196602, 1376256, 2, -196601, 1376256, 0, -196600, 65536, 1, -131064, 65536, 1, -65528, 65536, 1, 8, 65536, 1, 65544, 65536, 1, 131080, 65536, 1, 196616, 65536, 1, 262152, 65536, 2, 262151, 65536, 2, 262150, 65536, 2, 262149, 65536, 2, 262148, 65536, 2, 262147, 65536, 2, 262146, 65536, 2, 262145, 65536, 2, 262144, 65536, 2, 327679, 65536, 2, 327678, 65536, 2, 327677, 65536, 2, 327676, 65536, 2, 327675, 65536, 2, 327674, 65536, 2, 327673, 65536, 2, 327672, 65536, 2, 262136, 65536, 1, 196600, 65536, 1, 131064, 65536, 1, 65528, 65536, 1, -8, 65536, 1, -65544, 65536, 1, -131080, 65536, 1, -196616, 65536, 1, -196615, 458752, 1, -196614, 458752, 1, -196613, 458752, 1, -196612, 458752, 1, -196611, 1376256, 0, -196610, 1376256, 2, -196609, 1376256, 2, -262144, 1376256, 0, -262143, 1376256, 2, -262142, 1376256, 2, -262141, 1376256, 0, -262140, 1376256, 2, -262139, 1376256, 2, -262138, 1376256, 2, -262137, 1376256, 0, -262136, 65536, 1, 65542, 1376256, 0, -262152, 65536, 1, -262151, 458752, 1, -262150, 458752, 1, -262149, 458752, 1, -262148, 458752, 1, -262147, 1376256, 0, -262146, 1376256, 0, -262145, 1376256, 0, -327680, 1376256, 0, -327679, 1376256, 0, -327678, 1376256, 0, -327677, 1376256, 0, -327676, 1376256, 0, -327675, 1376256, 0, -327672, 65536, 1, -327673, 1376256, 0, -327674, 1376256, 0, -327688, 65536, 0, -327687, 65536, 0, -327686, 65536, 0, -327685, 65536, 0, -327684, 65536, 0, -327683, 65536, 0, -327682, 65536, 0, -327681, 65536, 0, -393216, 65536, 0, -393215, 65536, 0, -393214, 65536, 0, -393213, 65536, 0, -393212, 65536, 0, -393211, 65536, 0, -393210, 65536, 0, -393209, 65536, 0, -393208, 65536, 0, -327689, 0, 0, -262153, 0, 1, -196617, 0, 1, -131081, 0, 1, -65545, 0, 1, -9, 0, 1, 65527, 0, 1, 131063, 0, 1, 196599, 0, 1, 262135, 0, 1, 327671, 0, 2, -393207, 131072, 0, -327671, 131072, 1, -262135, 131072, 1, -196599, 131072, 1, -131063, 131072, 1, -65527, 131072, 1, 9, 131072, 1, 65545, 131072, 1, 131081, 131072, 1, 196617, 131072, 1, 262153, 131072, 2)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(16, 17)
-zoom = Vector2(4, 4)
+position = Vector2(10, -5)
+zoom = Vector2(3.6, 3.6)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_kpxmh")]
 position = Vector2(597, 40)
@@ -198,98 +199,150 @@ script = ExtResource("3_5jp68")
 [node name="Canyonwebp" type="TextureButton" parent="Window"]
 offset_left = -525.2632
 offset_top = -348.22708
-offset_right = 472.73682
+offset_right = 576.0951
 offset_bottom = 334.77292
 texture_normal = ExtResource("7_w41p2")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Window"]
 
-[node name="text3" type="RichTextLabel" parent="Window/CanvasLayer"]
-custom_minimum_size = Vector2(100, 50)
-anchors_preset = -1
-anchor_left = -0.044270832
-anchor_right = 0.07204861
-anchor_bottom = 0.18209876
-offset_left = 178.0
-offset_top = 111.0
-offset_right = 303.0
-offset_bottom = 161.0
-theme_override_font_sizes/normal_font_size = 20
-text = "Click on the Grand Canyon to take a photo of it on each orbit!
-Hurry, because the ISS travels fast."
-metadata/_edit_use_anchors_ = true
-
-[node name="text4" type="RichTextLabel" parent="Window/CanvasLayer"]
-custom_minimum_size = Vector2(100, 50)
-anchors_preset = -1
-anchor_left = -0.044270832
-anchor_right = 0.09375
-anchor_bottom = 0.16975309
-offset_left = 174.0
-offset_top = 113.0
-offset_right = 299.0
-offset_bottom = 163.0
-theme_override_font_sizes/normal_font_size = 20
-text = "Click on the Grand Canyon to take a photo of it on each orbit!
-Hurry, because the ISS travels fast."
-metadata/_edit_use_anchors_ = true
-
 [node name="text1" type="RichTextLabel" parent="Window/CanvasLayer"]
 custom_minimum_size = Vector2(100, 50)
 anchors_preset = -1
 anchor_left = -0.044270832
-anchor_right = 0.09548611
-anchor_bottom = 0.17901234
-offset_left = 172.0
-offset_top = 110.0
-offset_right = 297.0
-offset_bottom = 160.0
+anchor_right = 0.042534724
+anchor_bottom = 0.20216049
+offset_left = 206.0
+offset_top = 82.0
+offset_right = 331.0
+offset_bottom = 132.0
 theme_override_font_sizes/normal_font_size = 20
-text = "Click on the Grand Canyon to take a photo of it on each orbit!
-Hurry, because the ISS travels fast."
+bbcode_enabled = true
+text = "[color=black]Well done!
+You have completed your training and made it to the International Space Station."
 metadata/_edit_use_anchors_ = true
 
 [node name="text2" type="RichTextLabel" parent="Window/CanvasLayer"]
 custom_minimum_size = Vector2(100, 50)
 anchors_preset = -1
 anchor_left = -0.044270832
-anchor_right = 0.111979164
-anchor_bottom = 0.18209876
-offset_left = 174.0
-offset_top = 102.0
-offset_right = 299.0
-offset_bottom = 152.0
+anchor_right = 0.039930556
+anchor_bottom = 0.23919754
+offset_left = 203.0
+offset_top = 75.0
+offset_right = 328.0
+offset_bottom = 125.0
 theme_override_font_sizes/normal_font_size = 20
-text = "Click on the Grand Canyon to take a photo of it on each orbit!
-Hurry, because the ISS travels fast."
+bbcode_enabled = true
+text = "[color=black]Inside, you find the seven-window cupola, commonly used by astronauts to take photos of landmarks and events from space."
+metadata/_edit_use_anchors_ = true
+
+[node name="text5" type="RichTextLabel" parent="Window/CanvasLayer"]
+custom_minimum_size = Vector2(100, 50)
+anchors_preset = -1
+anchor_left = -0.044270832
+anchor_right = 0.039930556
+anchor_bottom = 0.23765433
+offset_left = 209.0
+offset_top = 73.0
+offset_right = 334.0
+offset_bottom = 123.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[color=black]The ISS circles the Earh 16 times a day, giving you 16 tries.
+Click on the window to take a photo - you need at least 5 for success."
+metadata/_edit_use_anchors_ = true
+
+[node name="text3" type="RichTextLabel" parent="Window/CanvasLayer"]
+custom_minimum_size = Vector2(100, 50)
+anchors_preset = -1
+anchor_left = -0.044270832
+anchor_right = 0.038194444
+anchor_bottom = 0.27160493
+offset_left = 204.0
+offset_top = 70.0
+offset_right = 329.0
+offset_bottom = 120.000015
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[color=black]You know that this is useful to humans, as natural disaters, weather, and changes in the landscape can be tracked more accurately."
+metadata/_edit_use_anchors_ = true
+
+[node name="int" type="RichTextLabel" parent="Window/CanvasLayer"]
+custom_minimum_size = Vector2(50, 20)
+anchors_preset = -1
+anchor_left = -0.19383253
+anchor_top = 0.36309522
+anchor_right = 0.012764718
+anchor_bottom = 0.33994716
+offset_left = 662.29504
+offset_top = 292.7143
+offset_right = 787.29504
+offset_bottom = 342.71423
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[color=black]Click on the window to take a photo"
+metadata/_edit_use_anchors_ = true
+
+[node name="taken" type="RichTextLabel" parent="Window/CanvasLayer"]
+custom_minimum_size = Vector2(50, 20)
+anchors_preset = -1
+anchor_left = -0.19383253
+anchor_top = 0.33994716
+anchor_right = -0.09747834
+anchor_bottom = 0.33994716
+offset_left = 714.29504
+offset_top = 102.71423
+offset_right = 839.29504
+offset_bottom = 152.71423
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[color=black]Photo of canyon taken!"
+metadata/_edit_use_anchors_ = true
+
+[node name="text4" type="RichTextLabel" parent="Window/CanvasLayer"]
+custom_minimum_size = Vector2(100, 50)
+anchors_preset = -1
+anchor_left = -0.044270832
+anchor_right = 0.035590276
+anchor_bottom = 0.20061728
+offset_left = 202.0
+offset_top = 69.0
+offset_right = 327.0
+offset_bottom = 119.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[color=black]You have now been tasked to photograph the Grand Canyon inside the 1.5m high space with a 3m diameter."
 metadata/_edit_use_anchors_ = true
 
 [node name="you-won" type="RichTextLabel" parent="Window/CanvasLayer"]
 custom_minimum_size = Vector2(100, 50)
 anchors_preset = -1
 anchor_left = -0.044270832
-anchor_right = 0.111979164
-anchor_bottom = 0.18209876
-offset_left = 278.0
-offset_top = 215.0
-offset_right = 403.0
-offset_bottom = 265.0
+anchor_right = 0.033854168
+anchor_bottom = 0.21141975
+offset_left = 199.0
+offset_top = 85.0
+offset_right = 324.0
+offset_bottom = 135.0
 theme_override_font_sizes/normal_font_size = 20
-text = "CONGRATULATIONS, YOU HAVE COMPLETED YOUR MISSION AS AN ASTRONAUT!"
+bbcode_enabled = true
+text = "[color=black]CONGRATULATIONS, YOU HAVE COMPLETED YOUR MISSION AS AN ASTRONAUT!"
 metadata/_edit_use_anchors_ = true
 
 [node name="YOU-LOST" type="RichTextLabel" parent="Window/CanvasLayer"]
 custom_minimum_size = Vector2(100, 50)
 anchors_preset = -1
-anchor_left = -0.044270832
-anchor_right = 0.111979164
-anchor_bottom = 0.18209876
-offset_left = 278.0
-offset_top = 215.0
-offset_right = 403.0
-offset_bottom = 265.0
+anchor_left = -0.06969452
+anchor_top = -0.38
+anchor_right = 0.011034621
+anchor_bottom = 1.58
+offset_left = 226.28809
+offset_top = 312.24
+offset_right = 351.28812
+offset_bottom = 362.24005
 theme_override_font_sizes/normal_font_size = 20
-text = "UNFORTUNATELY, YOU HAVE FAILED. PLEASE TRY AGAIN."
+bbcode_enabled = true
+text = "[color=black]UNFORTUNATELY, YOU HAVE FAILED. PLEASE TRY AGAIN."
 metadata/_edit_use_anchors_ = true
 
 [node name="Himalayas" type="TextureButton" parent="Window"]

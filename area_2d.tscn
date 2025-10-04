@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://baurm6g5jro2r"]
+
+[ext_resource type="Script" uid="uid://bhjb27f33xkdf" path="res://area_2d.gd" id="1_dl81w"]
+[ext_resource type="Script" uid="uid://btm0q5lwfdrky" path="res://Pool stuff/Scripts/collision_shape_2d.gd" id="1_gf172"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nsakb"]
+size = Vector2(288.88458, 52.27954)
+
+[node name="Area2D" type="Area2D"]
+collision_mask = 2
+gravity_space_override = 3
+gravity = 0.0
+script = ExtResource("1_dl81w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5794983, 2.8602295)
+shape = SubResource("RectangleShape2D_nsakb")
+script = ExtResource("1_gf172")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

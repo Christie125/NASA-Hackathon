@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://byn73q5h7441l"]
+
+[ext_resource type="Texture2D" uid="uid://dwt4oik6c7p4s" path="res://Pool stuff/Assets/Sprite-WAS.png" id="1_p0ykg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k48bg"]
+atlas = ExtResource("1_p0ykg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulh74"]
+atlas = ExtResource("1_p0ykg")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ke7lk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k48bg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulh74")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="tRIGGER" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_ke7lk")
+autoplay = "default"
+frame_progress = 0.7629802

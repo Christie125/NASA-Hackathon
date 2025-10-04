@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0i64s6hym42b"]
+
+[ext_resource type="Script" uid="uid://bhjb27f33xkdf" path="res://area_2d.gd" id="1_lqhsa"]
+[ext_resource type="Texture2D" uid="uid://do7l0jqapbdxw" path="res://Pool stuff/Assets/Sprite-0001.png" id="2_efw3x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3kgug"]
+size = Vector2(6, 20)
+
+[node name="Area2D" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_lqhsa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_efw3x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, -4)
+shape = SubResource("RectangleShape2D_3kgug")

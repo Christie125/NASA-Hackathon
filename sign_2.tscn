@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0lkhd4rljtjc"]
+
+[ext_resource type="Script" uid="uid://cb3d2s5nh21hj" path="res://sign_2.gd" id="1_nv24a"]
+[ext_resource type="Texture2D" uid="uid://dd1gcim4qfvgu" path="res://Pool stuff/Assets/sign.png" id="2_tsk0i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h1wt7"]
+
+[node name="Sign2" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_nv24a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tsk0i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_h1wt7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -404.0
+offset_top = -80.0
+offset_right = 387.5
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TextLabel" type="RichTextLabel" parent="CanvasLayer/Control/Panel"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 39.0
+offset_right = 705.0
+offset_bottom = 138.0
+text = "Great Job!
+
+You now how astronauts train for weightlessness on space walks.
+
+Remember, the real process is much more complex and requires extensive tests and safety measures
+
+Nonetheless, get ready for blast off!
+
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="PromptLabel" type="Label" parent="CanvasLayer/Control/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+metadata/_edit_use_anchors_ = true

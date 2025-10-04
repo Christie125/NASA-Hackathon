@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn27odwgw1t1m"]
+
+[ext_resource type="Texture2D" uid="uid://dokpiihtbo6na" path="res://Pool stuff/Assets/bbea99f1-f14e-44dc-8e46-f20c16c3c5dc__1_-removebg-preview.png" id="1_f7cmv"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(301, 87)
+scale = Vector2(0.9281046, 1)
+texture = ExtResource("1_f7cmv")
